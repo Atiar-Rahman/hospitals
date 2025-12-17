@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'hospital',
     'rest_framework',
     'djoser',
-    'users'
+    'users',
+    'cloudinary',
+    'cloudinary_storage',
+
 ]
 
 MIDDLEWARE = [
@@ -175,7 +178,6 @@ SWAGGER_SETTINGS = {
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
     'ACTIVATION_URL': 'activate/{uid}/{token}',
-    'PASSWORD_RESET_CONFIRM_URL':'password-reset/{uid}/{token}',
     'SEND_ACTIVATION_EMAIL': True,
     "SERIALIZERS": {
         "user_create": "users.serializers.UserCreateSerializer",

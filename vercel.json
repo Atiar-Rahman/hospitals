@@ -4,19 +4,15 @@
             "src": "hospital_management/wsgi.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "15mb"
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.11"
             }
         }
     ],
-    "functions": {
-        "hospital_management/wsgi.py": {
-            "runtime": "python3.11"
-        }
-    },
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "hospital_management/wsgi.py"
+            "src": "hospital_management/(.*)",
+            "dest": "/wsgi.py"
         }
     ]
 }
